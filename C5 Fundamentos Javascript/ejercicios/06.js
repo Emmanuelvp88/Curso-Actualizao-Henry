@@ -4,3 +4,5 @@
 const nuevoModulo = 21 % 5 === null;
 
 module.exports = nuevoModulo;
+
+
