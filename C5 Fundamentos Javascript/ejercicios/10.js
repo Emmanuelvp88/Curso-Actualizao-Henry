@@ -3,21 +3,14 @@ function esFechaValida(fecha) {
       // Comprueba si este corresponde a una fecha válida.
       // Si es así, retorna true, sino retorna false.
       // Tu código:
-      let regExp = /^\d{4}-\d{2}-\d{2}$/;
-      var dato = new Date(fecha);
-      // dato.test();
-      
-      // return regExp.test(fecha);
-      // let somos = fecha;
-      // let obtencion = typeof fecha;
-      let tipo = typeof dato;
-      document.write(fecha);
-      // if (regExp.test(fecha)) {
-            //       return true;
-            // } else {
-      //       return false;
-      // }
+      const fechaConvertida = new Date(fecha);
+      if (typeof fechaConvertida !== 'string' ){
+            return false;
+            }
+
+      return !isNaN(fechaConvertida.getTime());
 }
-esFechaValida();
+
+// document.write(esFechaValida("1988/7/17"));
 
 module.exports = esFechaValida;

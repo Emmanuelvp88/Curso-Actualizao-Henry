@@ -7,15 +7,17 @@ function esNumeroPrimo(numero) {
   // solo es divisible por sí mismo y por 1.
   // Tu código:
 
-  // const primo = (numero) =>{
-    // let resultado = typeof(numero);
-    if (Number.isInteger(numero)){
-      return "es un numero entero" + typeof(numero);
-      
-    }else{
-      return "es un flotante"
-    }  // }
+  for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      // document.write(i);
+      return false;
+    }
+  }
+  return  true;
+
+
+
 }
-document.write(esNumeroPrimo(3));
+// document.write(esNumeroPrimo(34));
 
 module.exports = esNumeroPrimo;
