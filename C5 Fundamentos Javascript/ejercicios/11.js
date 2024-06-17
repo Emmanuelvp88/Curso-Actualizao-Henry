@@ -16,6 +16,5 @@ function esMayorDeEdad(fechaNacimiento) {
       }
 
 }
-document.write(esMayorDeEdad(1988));
 
 module.exports = esMayorDeEdad;
